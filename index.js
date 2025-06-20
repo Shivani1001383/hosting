@@ -11,5 +11,5 @@ app.use("/api/notes", require("./routes/todo.routes"))
 mongoose.connect(process.env.MONGO_URL)
 mongoose.connection.once("open", () => {
     console.log("db connected")
-    app.listen(process.eventNames.PORT, console.log("server running on 5000"))
+    app.listen(process.env.PORT, console.log("server running on 5000"))
 })
